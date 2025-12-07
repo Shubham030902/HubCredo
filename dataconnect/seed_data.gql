@@ -1,0 +1,18 @@
+mutation CreateUserSeedData @auth(level: PUBLIC, insecureReason: "This mutation is used to seed the database with example data and is safe to expose to the public.") {
+  user_insertMany(data: [
+    {
+      id: "550e8400-e29b-41d4-a716-446655440000",
+      createdAt: "2024-04-27T12:00:00Z",
+      displayName: "Demo User 1",
+      email: "demo1@example.com",
+      photoUrl: "https://example.com/photo1.jpg"
+    },
+    {
+      id: "550e8400-e29b-41d4-a716-446655440001",
+      createdAt: "2024-04-27T13:00:00Z",
+      displayName: "Demo User 2",
+      email: "demo2@example.com",
+      photoUrl: "https://example.com/photo2.jpg"
+    }
+  ])
+}
